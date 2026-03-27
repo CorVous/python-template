@@ -20,8 +20,6 @@ Security audit: `uv audit --preview-features audit`
 
 ## Template Setup
 
-To use this template for a new project:
-
 1. **Create a new repository** from this template on GitHub (click "Use this template")
 
 2. **Clone your new repository** and navigate to it
@@ -57,5 +55,3 @@ To use this template for a new project:
    uv run ruff check
    uv run ty check
    ```
-
-9. **Commit your changes** and start building!
