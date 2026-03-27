@@ -62,18 +62,6 @@ jobs:
       - name: Install dependencies
         run: uv sync --dev
       
-      - name: Set dynamic version from tag
-        run: |
-          # Extract version from git tag (removes 'v' prefix if present)
-          VERSION=${GITHUB_REF#refs/tags/}
-          VERSION=${VERSION#v}
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
-          
-          # Update version in pyproject.toml
-          sed -i "s/^version = .*/version = \"$VERSION\"/" pyproject.toml
-          
-          echo "Building version: $VERSION"
-      
       - name: Build package
         run: uv run python -m build
       

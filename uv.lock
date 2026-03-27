@@ -3,13 +3,13 @@ revision = 3
 requires-python = "==3.13.*"
 
 [options]
-exclude-newer = "2026-03-20T04:09:36.6052129Z"
+exclude-newer = "2026-03-20T06:16:34.1251941Z"
 exclude-newer-span = "P7D"
 
 [options.exclude-newer-package]
-defusedxml = { timestamp = "2026-03-26T04:09:36.6052322Z", span = "P1D" }
-ruff = { timestamp = "2026-03-25T04:09:36.6052459Z", span = "P2D" }
-ty = { timestamp = "2026-03-26T04:09:36.6052493Z", span = "P1D" }
+defusedxml = { timestamp = "2026-03-26T06:16:34.1252225Z", span = "P1D" }
+ruff = { timestamp = "2026-03-25T06:16:34.1252432Z", span = "P2D" }
+ty = { timestamp = "2026-03-26T06:16:34.1252487Z", span = "P1D" }
 
 [[package]]
 name = "attrs"
@@ -523,7 +523,6 @@ wheels = [
 
 [[package]]
 name = "python-template"
-version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "defusedxml" },

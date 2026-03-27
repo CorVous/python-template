@@ -1,6 +1,6 @@
 [project]
 name = "python-template"
-version = "0.1.0"
+dynamic = ["version"]
 readme = "README.md"
 authors = [
     { name = "Cassidy Prather", email = "pratherea@gmail.com" }
@@ -10,6 +10,9 @@ dependencies = [
     "defusedxml >= 0.7.1, < 1",
     "trio >= 0.33.0, < 1",
 ]
+
+[project.scripts]
+python-template = "python_template.cli:main"
 
 [dependency-groups]
 dev = [
@@ -25,8 +28,14 @@ dev = [
 ]
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/python_template/_version.py"
 
 [tool.uv]
 exclude-newer = "7d"
@@ -37,6 +46,8 @@ ruff = "2d"
 ty = "1d"
 
 [tool.ruff.lint]
+preview = true # I'm not a coward!
+
 select = [
     "AIR", # airflow
     "ERA", # eradicate
@@ -119,3 +130,6 @@ ignore = [
 "tests/**/*.py" = [
     "S101", # Allow assert in tests
 ]
+
+[tool.ruff.format]
+preview = true # No cowards allowed!

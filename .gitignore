@@ -8,3 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Auto-generated version file
+src/python_template/_version.py
